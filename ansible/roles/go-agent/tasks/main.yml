@@ -12,20 +12,9 @@
     state: started
     enabled: yes
 
-- set_fact:
-     go_agent_config_changed: go_agent_config_update.changed
-
 - name: Configuring the go-agent
   become: yes
   template:
     src: go-agent-config
     dest: /etc/default/go-agent
-  register: go_agent_config_update
-
-- name: Restart go-agent
-  become: yes
-  service:
-    name: go-agent
-    state: restarted
-    enabled: yes
-  when: go_agent_config_changed
+  notify: Restart go-agent
