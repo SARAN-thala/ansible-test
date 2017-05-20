@@ -1,0 +1,7 @@
+---
+java_version: 8
+patch_version: 131
+oracle_jdk_rpm_url: http://download.oracle.com/otn-pub/java/jdk/{{java_version}}u{{patch_version}}-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-{{java_version}}u{{patch_version}}-linux-x64.rpm
+oracle_cookie: "Cookie: oraclelicense=accept-securebackup-cookie"
+destination: /opt/jdk-{{java_version}}u{{patch_version}}-linux-x64.rpm
+checksum: sha256:3d1e8cc66f4fd77acef6093329d5dd95bd06e4a03926c52df794f311a0c093f8

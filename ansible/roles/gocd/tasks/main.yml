@@ -1,0 +1,10 @@
+---
+- name: Add the go cd repo
+  become: yes
+  yum_repository:
+    name: gocd
+    description: adding gocd repo
+    baseurl: "{{gocd_url}}"
+    enabled: yes
+    gpgkey: "{{gocd_gpgkey}}"
+    gpgcheck: yes

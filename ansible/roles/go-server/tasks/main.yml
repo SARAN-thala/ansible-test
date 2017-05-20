@@ -1,0 +1,13 @@
+---
+- name: Install go server
+  become: yes
+  yum:
+    name: "go-server-{{go_server_version}}"
+    state: present
+
+- name: start go-server
+  become: yes
+  service:
+    name: go-server
+    state: started
+    enabled: yes

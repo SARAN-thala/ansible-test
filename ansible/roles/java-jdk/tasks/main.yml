@@ -1,6 +1,14 @@
-#---
-#- name: Install java
-#  become: yes
-#  yum:
-#    name: java
-#    state: present
+---
+- name: Download Oracle JDK rpm
+  become: yes
+  get_url:
+    url: "{{oracle_jdk_rpm_url}}"
+    headers: "{{oracle_cookie}}"
+    dest: "{{destination}}"
+    checksum: "{{checksum}}"
+
+- name: Install JDK
+  become: yes
+  yum:
+    name: "{{destination}}"
+    state: present

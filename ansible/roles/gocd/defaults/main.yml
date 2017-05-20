@@ -1,0 +1,3 @@
+---
+gocd_url: https://download.gocd.io
+gocd_gpgkey: https://download.gocd.io/GOCD-GPG-KEY.asc
