@@ -1,0 +1,4 @@
+---
+- hosts: webserver1
+  - roles:
+    - java-jdk
