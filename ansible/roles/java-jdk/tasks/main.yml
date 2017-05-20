@@ -3,7 +3,7 @@
   become: yes
   get_url:
     url: "{{oracle_jdk_rpm_url}}"
-    headers: "{{oracle_cookie}}"
+    headers: "Cookie: oraclelicense=accept-securebackup-cookie"
     dest: "{{destination}}"
     checksum: "{{checksum}}"
 
@@ -11,4 +11,3 @@
   become: yes
   yum:
     name: "{{destination}}"
-    state: present

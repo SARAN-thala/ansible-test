@@ -4,9 +4,9 @@
   yum_repository:
     name: gocd
     description: adding gocd repo
-    baseurl: "{{gocd_url}}"
+    baseurl: https://download.gocd.io
     enabled: yes
-    gpgkey: "{{gocd_gpgkey}}"
+    gpgkey: https://download.gocd.io/GOCD-GPG-KEY.asc
     gpgcheck: yes
 
 - include_role:
