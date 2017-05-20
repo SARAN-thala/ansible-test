@@ -8,3 +8,6 @@
     enabled: yes
     gpgkey: "{{gocd_gpgkey}}"
     gpgcheck: yes
+
+- include_role:
+    name: java-jdk
