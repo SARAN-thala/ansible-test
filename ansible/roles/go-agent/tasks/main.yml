@@ -1,0 +1,13 @@
+---
+- name: Install go agent
+  become: yes
+  yum:
+    name: "go-agent-{{go_agent_version}}"
+    state: present
+
+- name: start go-agent
+  become: yes
+  service:
+    name: go-agent
+    state: started
+    enabled: yes
